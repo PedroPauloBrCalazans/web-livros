@@ -1,5 +1,6 @@
-import logoHeader from "../../imagens/logo.svg";
 import "./index.css";
+
+import logoHeader from "../../imagens/logo.svg";
 
 function Logo() {
   return (
