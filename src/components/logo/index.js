@@ -4,7 +4,7 @@ import "./index.css";
 function Logo() {
   return (
     <div className="logo">
-      <img src={logoHeader} alt="Logo" />
+      <img src={logoHeader} alt="Logo" className="logo-img" />
       <p>
         <strong>Alura</strong>
         Books
