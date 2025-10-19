@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { livros } from "./dadosUltimosLancamentos";
 import { Titulo } from "../Titulo";
+import CardRecomenda from "../card-recomendacao";
+import imgLivro from "../../imagens/livro2.png";
 
 const UltimosLancamentosContainer = styled.section`
   background-color: #ebecee;
@@ -29,6 +31,12 @@ function UltimosLancamentos() {
           <img src={livro.src} alt="Livros últimos lançamentos" />
         ))}
       </NovosLivrosContainer>
+      <CardRecomenda
+        titulo="Talvez você se interesse por..."
+        subTitulo="C# .Net Core"
+        descricao="Construindo uma API Rest com o Google"
+        img={imgLivro}
+      />
     </UltimosLancamentosContainer>
   );
 }
