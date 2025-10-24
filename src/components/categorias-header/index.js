@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const CategoriasHeaderUL = styled.ul`
@@ -18,14 +19,16 @@ const Opcoes = styled.li`
 `;
 
 function CategoriasHeader() {
-  const textoOpcoes = ["CATEGORIAS", "FAVORITOS", "MINHA ESTANTE"];
+  const textoOpcoes = ["CATEGORIAS", "FAVORITOS", "ESTANTE"];
 
   return (
     <CategoriasHeaderUL>
       {textoOpcoes.map((texto) => (
-        <Opcoes>
-          <p>{texto}</p>
-        </Opcoes>
+        <Link to={`/${texto.toLowerCase()}`}>
+          <Opcoes>
+            <p>{texto}</p>
+          </Opcoes>
+        </Link>
       ))}
     </CategoriasHeaderUL>
   );
