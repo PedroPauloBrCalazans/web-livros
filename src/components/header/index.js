@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import CategoriasHeader from "../categorias-header";
 import IconesHeader from "../icones-header";
 import Logo from "../logo";
@@ -12,7 +13,9 @@ const HeaderContainer = styled.header`
 function Header() {
   return (
     <HeaderContainer>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <CategoriasHeader />
       <IconesHeader />
     </HeaderContainer>

@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/header";
+import Favoritos from "./routes/Favoritos";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -31,9 +33,10 @@ root.render(
   <React.StrictMode>
     <GlobalStyle />
     <BrowserRouter>
+      <Header />
       <Routes>
-        <Route path="/favoritos" element={<p>Teste</p>} />
         <Route path="/" element={<App />} />
+        <Route path="/favoritos" element={<Favoritos />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
