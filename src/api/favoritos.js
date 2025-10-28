@@ -10,4 +10,12 @@ async function getFavoritos() {
   return response.data;
 }
 
-export { getFavoritos };
+async function cadastrarFavorito(id) {
+  await favoritosAPI.post(`/${id}`);
+}
+
+async function excluirFavorito(id) {
+  await favoritosAPI.delete(`/${id}`);
+}
+
+export { getFavoritos, cadastrarFavorito, excluirFavorito };
